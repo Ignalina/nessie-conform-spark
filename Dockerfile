@@ -1,5 +1,5 @@
 FROM bitnami/spark:3.1.2
-
+# Below follows Bitnami's instruktions
 USER root
 RUN rm -r /opt/bitnami/spark/jars && \
     echo insecure >> ~/.curlrc && \
