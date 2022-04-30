@@ -4,9 +4,7 @@ spark.hadoop.fs.s3a.endpoint http://localhost:9000
 spark.hadoop.fs.s3a.path.style.access True
 spark.hadoop.fs.s3a.impl org.apache.hadoop.fs.s3a.S3AFileSystem
 #spark.hadoop.fs.s3a.aws.credentials.provider org.apache.hadoop.fs.s3a.TemporaryAWSCredentialsProvider
-#spark.hadoop.nessie.url http://10.1.1.192:19120/api/v1
-#spark.hadoop.nessie.ref main
-#spark.hadoop.nessie.authentication.type NONE
+
 
 spark.sql.catalog.nessie org.apache.spark.sql.delta.catalog.DeltaCatalog
 spark.sql.catalog.nessie.warehouse s3a://nessiebucket/
@@ -18,4 +16,4 @@ spark.delta.logStore.class org.projectnessie.deltalake.NessieLogStore
 spark.delta.logFileHandler.class org.projectnessie.deltalake.NessieLogFileMetaParser
 spark.sql.extensions io.delta.sql.DeltaSparkSessionExtension,org.projectnessie.spark.extensions.NessieSparkSessionExtensions 
 
-spark.jars.packages org.projectnessie:nessie-deltalake:0.9.2,org.apache.hadoop:hadoop-aws:3.3.1,org.projectnessie:nessie-spark-extensions:0.9.2
+spark.jars.packages org.projectnessie:nessie-deltalake:0.28.0,org.apache.hadoop:hadoop-aws:3.3.1,org.projectnessie:nessie-spark-extensions:0.28.0
